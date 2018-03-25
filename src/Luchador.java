@@ -2,7 +2,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Luchador {
+public class Luchador{
     
     static String [][] stats = new String[6][16];
     
@@ -65,22 +65,22 @@ public class Luchador {
     String tipo = faccion[i];
     return tipo;
     }
-    public static int estrellas(int atk, int def, int vida, int vel){
-    int estrellas = 0;
-    int total = atk+def+vida+vel;
-    if(total < 139){
+    public static int estrellas(){
+    int estrellas = (int)(Math.random()*100);
+    
+    if(estrellas < 40){
     estrellas = 1;
     }
-    if(total >= 139 & total < 278){
+    if(estrellas >= 40 & estrellas < 70){
     estrellas = 2;   
     }
-    if(total >= 278 & total < 417){
+    if(estrellas >= 70 & estrellas < 85){
     estrellas = 3;
     }
-    if(total >= 417 & total < 556){
+    if(estrellas >= 85 & estrellas < 95){
     estrellas = 4;
     }
-    if(total >= 556){
+    if(estrellas >= 95){
     estrellas = 5;
     }
     return estrellas;
@@ -104,7 +104,7 @@ public class Luchador {
     public static void crearluchador(int atk, int def, int vida, int vel, String nombre, String faccion){
     System.out.println("Se creó el luchador "+nombre +",tiene "+atk + " de ataque, tiene "+def +" de defensa" + " ,tiene "+vida +" de vida"+ " ,tiene "+vel +" de velocidad"+ " ,tiene faccion "+faccion);
     
-    almacenarLuchador(atk,def,vida,vel,nombre,faccion,estrellas(atk, def, vida, vel));
+    almacenarLuchador(atk,def,vida,vel,nombre,faccion,estrellas());
     }
     public static void almacenarLuchador(int atk, int def, int vida, int vel, String nombre, String faccion, int estrellas){
     stats[0][0] = "Tabla";     
@@ -114,10 +114,10 @@ public class Luchador {
     stats[4][0] = "Vel";
     stats[5][0] = "Stars";
     stats[0][b] = nombre;
-    stats[1][b] = String.valueOf(atk);
-    stats[2][b] = String.valueOf(def);
-    stats[3][b] = String.valueOf(vida);
-    stats[4][b] = String.valueOf(vel);
+    stats[1][b] = String.valueOf(atk*estrellas);
+    stats[2][b] = String.valueOf(def*estrellas);
+    stats[3][b] = String.valueOf(vida*estrellas);
+    stats[4][b] = String.valueOf(vel*estrellas);
     stats[5][b] = String.valueOf(estrellas);
     b++; 
     }
