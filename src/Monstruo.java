@@ -8,10 +8,7 @@ public class Monstruo {
   private int spd;
   
   public Monstruo(){
-  setHp();
-  setAtk();
-  setDef();
-  setSpd();
+  crearMonstruo();
   } // El constructor se encargará de crear los monstruos (objetos de la clase Monstruo) con sus respectivos atributos
   
  private void setHp(){
@@ -37,6 +34,12 @@ public class Monstruo {
  }
  public int getSpd(){
  return this.spd;
+ }
+ private void crearMonstruo(){
+  setHp();
+  setAtk();
+  setDef();
+  setSpd();
  }
  private ArrayList<ObjetoEquipable> objeto(){
  ArrayList <ObjetoEquipable> dropeos = new ArrayList<>();
