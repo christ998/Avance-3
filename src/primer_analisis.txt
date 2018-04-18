@@ -8,5 +8,7 @@ InventarioLuchador, pues no es crucial tener un inventario para que el luchador 
 -Lo mismo ocurre para la clase "InventarioObjeto", usa la clase ObjetoEquipable para almacenar en el ArrayList las instancias, 
 y la clase ObjetoEquipable no requiere estrictamente un inventario para hacer su uso
 
+-La clase monstruo es dependiente de objetoEquipable para ocupar el metodo de objeto dropeable
+
 -Las clases Luchador y Monstruo tiene una relación de generalización con la clase Object, éstas implicitamente heredan 
 las funciones de dicha clase
