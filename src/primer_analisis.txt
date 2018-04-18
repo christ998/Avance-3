@@ -1,12 +1,12 @@
 Observaciones:
 
 - La clase InventarioLuchador es dependiente de la clase Luchador, pues si no existiera la clase Luchador, 
-no podr· cumplir con su rol principal, que es guardar las instancias de dicha clase. La clase luchador se asocia debilmente con
+no podr√° cumplir con su rol principal, que es guardar las instancias de dicha clase. La clase luchador se asocia debilmente con
 InventarioLuchador, pues no es crucial tener un inventario para que el luchador pueda inicializar sus atributos
 
 
--Lo mismo ocurre para la clase "InventarioObjeto", depende de la clase ObjetoEquipable para almacenar en el ArrayList las instancias, 
+-Lo mismo ocurre para la clase "InventarioObjeto", usa la clase ObjetoEquipable para almacenar en el ArrayList las instancias, 
 y la clase ObjetoEquipable no requiere estrictamente un inventario para hacer su uso
 
--Las clases Luchador y Monstruo tiene una relaciÛn de generalizaciÛn con la clase Object, Èstas implicitamente heredan 
+-Las clases Luchador y Monstruo tiene una relaci√≥n de generalizaci√≥n con la clase Object, √©stas implicitamente heredan 
 las funciones de dicha clase
