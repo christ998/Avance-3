@@ -10,5 +10,4 @@ y la clase ObjetoEquipable no requiere estrictamente un inventario para hacer su
 
 -La clase monstruo es dependiente de objetoEquipable para ocupar el metodo de objeto dropeable
 
--Las clases Luchador y Monstruo tiene una relación de generalización con la clase Object, éstas implicitamente heredan 
-las funciones de dicha clase
+-Todas las clases heredan de la clase Object (lo puse de modo complementario)
